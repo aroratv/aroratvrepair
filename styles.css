@@ -110,7 +110,7 @@ html, body {
 
 .content-2 {
     position: absolute;
-    bottom: 80px;
+     bottom: 119px;
 }
 
 .content-2 h1 {
@@ -146,7 +146,8 @@ html, body {
 }
 .content-two {
     position: absolute;
-    bottom: 80px;
+    bottom: 119px;
+    left:13px
 }
 
 .content-two h1 {
