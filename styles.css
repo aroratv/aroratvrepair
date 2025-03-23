@@ -141,7 +141,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    margin-left: 600px;
+    margin-left: 580px;
 }
 
 .buttons button {
@@ -151,8 +151,7 @@ body {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    margin-left: 700px;
-    left: 12px
+    margin-left: 685px;
 }
 
 /* @media screen and (max-width: 1280px)  { 
