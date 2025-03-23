@@ -21,25 +21,16 @@ body {
 
 }
 
+.icon-box:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-display: flex;
-flex-wrap: wrap; /* Prevents items from overflowing */
-justify-content: center;
-@media (max-width: 768px) { /* Check actual device width */
-  .your-class {
-    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
-}
-body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-
+  
 .navbar {
     position: fixed;
     top: 0;
@@ -119,8 +110,7 @@ body {
 
 .content-2 {
     position: absolute;
-    bottom: 121px;
-    left: 15px;
+    bottom: 80px;
 }
 
 .content-2 h1 {
@@ -141,7 +131,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    margin-left: 580px;
+    margin-left: 570px;
 }
 
 .buttons button {
@@ -152,6 +142,7 @@ body {
     cursor: pointer;
     font-size: 18px;
     margin-left: 685px;
+
 }
 .content-two {
     position: absolute;
@@ -298,6 +289,8 @@ body {
         font-size: 22px;
         margin: 10px 0;
         color: white;
+
+    }
     .buttons {
         display: flex;
         justify-content: center;
@@ -308,7 +301,7 @@ body {
     .buttons button {
         font-size: 18px;
         padding: 12px 24px;
-         margin-left: 50px;
+        margin-left: 50px;
     }
 
     .content {
@@ -334,11 +327,6 @@ body {
         padding-left: 250px;
     }
 
-    .buttons-1 button {
-        font-size: 18px;
-        padding: 12px 24px;
-        margin-left: 350px;
-    }
 
 }
 
@@ -368,7 +356,7 @@ body {
         margin: 8px 0;
         color: white;
     }
-
+    
     .buttons .button {
         display: flex;
         justify-content: center;
@@ -379,7 +367,8 @@ body {
     .buttons button {
         font-size: 14px;
     }
-    .content-two {
+        /* Mobile Devices */
+        .content-two {
             position: absolute;
             top: 65%;
             left: 50%;
@@ -532,7 +521,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .toggle-btn {
         display: none;
     }
@@ -1172,7 +1161,7 @@ li {
     .image-10 img {
         max-width: 400px;
         border-radius: 8px;
-        margin-left: 88px;
+        margin-left: 99px;
     }
 
     .about {
