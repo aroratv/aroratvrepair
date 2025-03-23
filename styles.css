@@ -308,6 +308,7 @@ body {
     .buttons button {
         font-size: 18px;
         padding: 12px 24px;
+         margin-left: 50px;
     }
 
     .content {
@@ -531,7 +532,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
     .toggle-btn {
         display: none;
     }
