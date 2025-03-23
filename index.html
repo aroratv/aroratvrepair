@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAV -->
+    <div class="navbar fade-in" id="navbar">
+        <h1>ARORA TV REPAIR</h1>
+        <button class="toggle-btn" onclick="toggleNav()">☰</button>
+        <div class="nav-links">
+            <a href="#slideshow-container"><i class="fa-solid fa-house"></i></a>
+            <a href="#sheading"><i class="fa-regular fa-comment"></i></a>
+            <a href="#gallery-2"><i class="fa-regular fa-images"></i></a>
+            <a href="#footer"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+    <script>
+        function toggleNav() {
+            let nav = document.querySelector(".nav-links");
+            nav.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function (event) {
+            let nav = document.querySelector(".nav-links");
+            let toggleBtn = document.querySelector(".toggle-btn");
+
+
+            if (!nav.contains(event.target) && !toggleBtn.contains(event.target)) {
+                nav.classList.remove("active");
+            }
+        });
+
+    </script>
+    <!-- HOME -->
+    <div id="slideshow-container" class="fade-in">
+        <div class="slide active" style="background: url('images/repair2.jpg') no-repeat center/cover;">
+            <div class="content-2">
+                <h1>30+ Years Experience</h1>
+                <p>TOP RATED IN JALANDHAR</p>
+                <div class="buttons">
+
+                    <a href="tel:+917888969615"><button type="submit">CONTACT NOW</button></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="slide" style="background: url('images/homes.jpg') no-repeat center/cover;">
+            <div class="content-2">
+                <h1>HOME SERVICES</h1>
+                <p>Complete Home Care!</p>
+                <div class="buttons">
+                    <a href="tel:+917888969615"><button type="submit">CONTACT NOW</button></a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="slide" style="background: url('images/thirdslide.jpg') no-repeat center/cover;">
+            <div class="content-2">
+                <h1>QUALITY SERVICE</h1>
+                <p>Best Repair Solutions</p>
+                <div class="buttons">
+                    <a href="tel:+919814972741"><button type="submit">CONTACT NOW</button></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="slideshow-btns">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+    </div>
+    </div>
+    <br>
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlides() {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        // Function to go to the next slide
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlides();
+        }
+
+        // Function to go to the previous slide
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlides();
+        }
+
+        // Auto-slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // Initialize the first slide
+        showSlides();
+
+
+
+
+
+        window.addEventListener('scroll', () => {
+            let navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <!-- service -->
+    <div id="sheading" class="fade-in">OUR SERVICES</div>
+    <div class="pricing-container">
+        <div class="plan fade-in">
+            <h2>LCD/LED/TV REPAIR</h2>
+            <i class="fa-duotone fa-solid fa-tv"></i>
+            <ul>
+                <br>
+                <li>"Professional LCD, LED, and TV repair services for clear, vibrant displays."</li>
+            </ul>
+            <a href="tel:+917888969615"><button class="btn">CONTACT NOW</button></a>
+        </div>
+
+        <div class="plan fade-in">
+            <h2>MICROWAVE REPAIR</h2>
+            <img src="images/microwave.png" alt="micro">
+            <ul>
+
+                <li>"Expert microwave repair services to restore efficiency and performance."</li>
+            </ul>
+            <a href="tel:+917888969615"><button class="btn">CONTACT NOW</button></a>
+        </div>
+
+        <div class="plan fade-in">
+            <h2>HOME SERVICES</h2>
+            <i class="fa-solid fa-house-chimney"></i>
+            <ul>
+
+                <br>
+                <li>"Convenient Home Visit Service – Expert Repairs at Your Doorstep!"</li>
+            </ul>
+            <a href="form.html"><button class="btn">BOOK NOW</button></a>
+        </div>
+        <div class="plan fade-in">
+            <h2>NEW LED'S SALE</h2>
+
+            <i class="fa-solid fa-tv"></i>
+            <ul>
+                <li>"Brand new LED TVs for sale – best quality and performance at great prices!"</li>
+            </ul>
+            <a href="tel:+917888969615"><button class="btn">CONTACT US</button></a>
+        </div>
+    </div>
+    <br>
+    <a href="service.html"> <button class="view-more-btn">View More</button></a>
+    <br>
+    <div class="strip-container fade-in">
+        <div class="strip" id="movingStrip">
+            Arora Tv Repair – Expert Repairs for All TV Brands Using Advanced Technology and Skilled Technicians.
+        </div>
+    </div>
+    <br>
+    <section class="about-us">
+        <div class="abc">
+            <div class="image-10">
+                <img src="images/g6.jpg" alt="TV Repair Service">
+            </div>
+            <div class="about">
+                <h2>About Us!</h2>
+                <p>Welcome to <strong>Arora Tv Repair</strong>, your trusted expert for professional TV repair services.
+                    We specialize in repairing all types of televisions, including LED, LCD, OLED, and Smart TVs,
+                    ensuring high-quality and reliable solutions.</p>
+
+                <h3>Why Choose Us?</h3>
+                <br>
+                <ul>
+                    <p><i class="fas fa-check-circle"></i> Experienced & Certified Technicians</p><br>
+                    <p><i class="fas fa-check-circle"></i> Fast & Reliable Repairs</p><br>
+                    <p><i class="fas fa-check-circle"></i> Affordable Pricing</p><br>
+                    <p><i class="fas fa-check-circle"></i> Home Service Available</p><br>
+                    <p><i class="fas fa-check-circle"></i> 100% Customer Satisfaction</p>
+                </ul>
+                </p>
+
+                <h3>Our Mission</h3>
+                <br>
+                <p>At Arora Tv Repair, we are dedicated to delivering top-notch repair services with transparency and
+                    customer satisfaction as our priorities. Your entertainment experience matters to us!</p>
+
+            </div>
+        </div>
+    </section>
+    <br>
+    <div class="container-1 fade-in">
+        <div class="text-box"><br>
+            <h1>Advanced Repair Solutions – Panel Repair Bonding Machine</h1>
+            <p>At Arora Tv Repair, we specialize in LED, OLED, and Plasma display repairs using state-of-the-art tools
+                and advanced techniques. Our skilled technicians ensure a fast, reliable, and precise fix, restoring
+                your screen to its original brilliance.
+                .<br>
+                <br> <i class="fa-regular fa-circle-dot"></i> Introducing Jalandhar’s Most Advanced Bonding Machine for
+                Panel Repair – a cutting-edge solution
+                for seamless screen restoration, ensuring superior performance and durability.<br>
+                <br>
+                <i class="fas fa-map-marker-alt"></i> Visit Us Today – Arora Tv Repair, Jalandhar<br><br>
+                <i class="fas fa-check-circle"></i> Quality You Can Trust | Repairs You Can Rely On
+            </p>
+
+        </div>
+        <div class="image-box fade-in">
+            <img class="bg" src="images/g2.jpg" alt="Background Image">
+
+        </div>
+    </div>
+    <br><br><br>
+    <div class="hero fade-in">
+        <h1>Happy Clients & Testimonials</h1>
+        <p>See what our customers say about Arora Tv Repair!</p>
+    </div>
+    <div class="container">
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="images/v916-nunny-635.jpg" alt="Client 1">
+                <h3>Pushpak Kumar</h3>
+                <p>Had a great experience, owner was very well spoken, highly experienced in his field, he was quick in
+                    identifying the fault and fixing it at very reasonable rate(Sony KDL 43W8000). I highly recommend
+                    everyone to get their TVs repaired from this shop. They have exceeded my expectations. Special
+                    mention: They also offer home visit service at reasonable cost. </p>
+            </div>
+            <div class="testimonial">
+                <img src="images/v916-nunny-635.jpg" alt="Client 2">
+                <h3>Y P ELECTRONICS </h3>
+                <p>Vgood Service in Jalandhar.Purchased Leds from Arora Tv Repair .A1 Quality Leds Smart Tv 4k display.
+                    And reasonable prices. I personally recommend it. Do visit </p>
+            </div>
+            <div class="testimonial">
+                <img src="images/v916-nunny-635.jpg" alt="Client 3">
+                <h3>Vikram Sarpal</h3>
+                <p>Jalandhar's 40 year old Led Repair Shop. Vinod Arora. Repaired My MI Led From Them. Best Service Was
+                    Provided. </p>
+            </div>
+            <div class="testimonial">
+                <img src="images/v916-nunny-635.jpg" alt="Client 3">
+                <h3>Theweeknd Edits</h3>
+                <p>My Samsung Led got screen problem
+                    And i contacted many dealers but no one took it serious
+                    But Arora ji repaired my led with success and gave me guarantee too. My feedback is Arora Ji's shop
+                    is The best led repair shop in the town. I personally recommend. </p>
+            </div>
+            <div class="testimonial">
+                <img src="images/v916-nunny-635.jpg" alt="Client 3">
+                <h3>Arush</h3>
+                <p>Excellent service!
+                    Very helpful and polite staff and most importantly they are really very skillful they solved our
+                    problem in minutes 5 stars! </p>
+            </div>
+            <div class="testimonial">
+                <img src="images/v916-nunny-635.jpg" alt="Client 3">
+                <h3>Dont Worry</h3>
+                <p>"I can't recommend Arora ji's enough! My TV was on the fritz, and I was worried I'd have to replace
+                    it. But he quickly diagnosed the problem, and had it fixed in no time. Very knowledgeable,
+                    professional, and honest with pricing-no hidden fees or unnecessary repairs.
+
+                    Arora ji even took the time to explain what went wrong. My TV now works like new, and I couldn't be
+                    happier. If you're looking for reliable TV repair, this is the person to call!" </p>
+            </div>
+        </div>
+    </div><br><br><br>
+    <!-- gallery -->
+    <br>
+    <div id="gallery-2" class="fade-in">
+        <h1>OUR GALLERY</h1>
+    </div>
+    <div class="gallery">
+        <div class="slider-g">
+            <div class="slide-g"><img src="images/g1.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/g2.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/g3.jpg" alt="Slide 2"></div>
+            <div class="slide-g"><img src="images/g6.jpg" alt="Slide 3"></div>
+            <div class="slide-g"><img src="images/g5.jpg" alt="Slide 4"></div>
+            <div class="slide-g"><img src="images/g6.jpg" alt="Slide 2"></div>
+            <div class="slide-g"><img src="images/g4.jpg" alt="Slide 3"></div>
+            <div class="slide-g">
+                <video width="100%" height="500px" autoplay loop muted>
+                    <source src="images/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="slide-g"><img src="images/g6.jpg" alt="Slide 5"></div>
+            <div class="slide-g">
+                <video width="100%" height="500px" autoplay loop muted>
+                    <source src="images/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="slide-g"><img src="images/g7.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/g8.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/g6.jpg" alt="Slide 2"></div>
+            <div class="slide-g"><img src="images/g9.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/g10.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/WhatsApp Image 2025-03-15 at 15.06.21_9f8bfbf1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide-g"><img src="images/g1.jpg" alt="Slide 1"></div>
+            <div class="slide-g"><img src="images/g6.jpg" alt="Slide 1"></div>
+
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider-g");
+            const slides = Array.from(slider.children);
+
+            // Clone all slides to create a seamless effect
+            slides.forEach(slide => {
+                let clone = slide.cloneNode(true);
+                slider.appendChild(clone);
+            });
+        });
+    </script>
+
+
+    <br><br>
+
+    <br>
+    <footer id="footer">
+        <section class="googlemap">
+            <div class="map">
+                <h1>Get in Touch</h1>
+                <p><i class="fa-solid fa-phone-volume"></i> <a href="tel:+919814972741">+91 981497241</a></p>
+                <p><i class="fa-solid fa-phone-volume"></i> <a href="tel:+919876776741">+91 9876776741</a></p>
+                <p><i class="fa-solid fa-phone-volume"></i> <a href="tel:+917888969615">+91 7888969615</a></p>
+                <p><i class="fa-regular fa-envelope"></i> <a
+                        href="mailto:aroratvrepair@gmail.com">aroratvrepair@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aroratvrepair/?igsh=MXgxNjA1dTF0ZzNkbA%3D%3D&utm_source="><i
+                            class="fab fa-instagram"></i> Instagram</a><br><br>
+                    <a href="https://youtube.com/@aroratvrepair?si=-NPhvvs3-c5os7fL"><i
+                            class="fa-brands fa-youtube"></i> YouTube</a><br><br>
+                    <a href="https://www.facebook.com/share/15qygnbQ21/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-facebook"></i> Facebook</a><br><br>
+                    <a href="#"><i class="fas fa-globe"></i> Website</a><br><br>
+                    <a href="https://g.co/kgs/Ft7gFs4"><i class="fa-brands fa-google"></i> Profile</a>
+                </div>
+        </section>
+        <div class="contact-info">
+            <h2>Arora Tv Repair</h2>
+            <h2>CEO- VINOD ARORA</h2>
+            <h2>30+ Years Experience</h2>
+            <p><strong><a
+                        href="https://www.google.com/maps/dir/30.7039849,76.9009191/WG+416,+Niwa,+Arora+Tv+Repair,+New+Suraj+Ganj,+Shaheed+Udham+Singh+Nagar,+Jalandhar,+Punjab+144002/@31.0045789,74.9169182,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x391a5b5d0ff17443:0x890b7ba9fd0e131c!2m2!1d75.5719685!2d31.3230295?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D"><i
+                            class="fas fa-map-marker-alt"></i></a></strong>
+                WG-416, Niwa Suraj Gunj <br>,SUS Nagar, Jalandhar, Punjab,<br>144003</p>
+            <p><strong><i class="fa-regular fa-clock"></i></strong> (MON-SAT) 8:00 AM - 10:00 PM</p>
+            <p><strong><i class="fa-regular fa-clock"></i></strong> (SUN) 8:00 AM - 6:00 PM</p>
+        </div>
+
+        </div>
+        <br>
+    </footer>
+    <!-- last button -->
+    <button id="scrollTop">▲</button>
+
+    <script>
+        const scrollTopBtn = document.getElementById("scrollTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        });
+
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>
