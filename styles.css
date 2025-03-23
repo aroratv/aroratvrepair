@@ -153,7 +153,31 @@ body {
     font-size: 18px;
     margin-left: 685px;
 }
+.content-two {
+    position: absolute;
+    bottom: 80px;
+}
 
+.content-two h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin-left: 502px;
+    max-width: auto;
+}
+
+.content-two p {
+    font-size: 30px;
+    margin: 15px auto;
+    width: fit-content;
+    max-width: 600px;
+    color: white;
+    background-color: red;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-left: 600px;
+}
 /* @media screen and (max-width: 1280px)  { 
     .content-2 h1 {
         font-size: 60px;
@@ -252,7 +276,28 @@ body {
         color: white;
 
     }
+    .content-two {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
+    .content-two h1 {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .content-two p {
+        font-size: 22px;
+        margin: 10px 0;
+        color: white;
     .buttons {
         display: flex;
         justify-content: center;
@@ -333,6 +378,29 @@ body {
     .buttons button {
         font-size: 14px;
     }
+    .content-two {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    
+        .content-two h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+    
+        .content-two .content p {
+            font-size: 16px;
+            margin: 8px 0;
+            color: white;
+        }
 }
 
 /* Navigation buttons */
