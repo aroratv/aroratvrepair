@@ -21,10 +21,24 @@ body {
 
 }
 
-.icon-box:hover::after {
-    opacity: 1;
-    visibility: visible;
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+display: flex;
+flex-wrap: wrap; /* Prevents items from overflowing */
+justify-content: center;
+@media (max-width: 768px) { /* Check actual device width */
+  .your-class {
+    width: 100%;
+  }
+}
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 .navbar {
     position: fixed;
