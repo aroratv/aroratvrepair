@@ -302,7 +302,7 @@ body {
         display: flex;
         justify-content: center;
         width: 100%;
-        margin-right: 700px;
+        margin-right: 60px;
     }
 
     .buttons button {
@@ -531,7 +531,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
     .toggle-btn {
         display: none;
     }
